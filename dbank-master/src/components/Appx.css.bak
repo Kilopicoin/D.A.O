@@ -1,0 +1,278 @@
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    padding: 30px;
+	
+}
+
+.messages {
+    text-align: center;
+    margin: 0 -20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trx {
+	font-family:Franklin Gothic Medium;
+  color: #FF96E0;
+  text-align: center;
+  
+}
+
+.btn-warning {
+ color: white;
+ background-color: #8D6CF3;
+}
+
+.btn-warning:hover {
+ color: white;
+ background-color: #8D6CF3;
+}
+
+.kolon1 {
+  margin: auto;
+  width:75%;
+  min-height:300px !important;
+  max-height:820px !important;
+  overflow: auto;
+
+  
+}
+
+.kolon2 {
+  width:50%;
+  min-height:300px !important;
+  max-height:820px !important;
+  overflow: auto;
+  float:right;
+}
+
+
+.vl {
+  border-left: 1px solid #e6ccff;
+  height: 900px;
+  position: absolute;
+  left: 50.1%;
+  top: 120px;
+}
+
+.kontainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    > .header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin: 0 10px;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        &.white {
+            border-radius: 4px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+            background: #fff;
+            flex-direction: column;
+        }
+
+        .banner {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        span {
+            flex: 1;
+            text-align: right;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        p {
+            padding: 20px;
+            margin: 0;
+
+            strong {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+    color: #333333;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+h3 {
+	font-family:Franklin Gothic Medium;
+    font-size: 24px;
+    color: #FF96E0;
+    line-height: 24px;
+    padding-bottom: 15px;
+	border-radius: 30px;
+}
+
+.table td, .table th {
+    border-top: 0px solid #dee2e6 !important;
+}
+
+.table tr {
+    border-bottom: 1px solid #520066 !important;
+}
+
+.table {
+font-family: Gadugi;
+color: #ffffff;
+}
+
+h4 {
+	font-family: Gadugi;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 30px;
+
+background-color:rgba(61, 0, 77, 0.1);
+    padding: 12px;
+	border-radius: 3px;
+	border: 1px solid #290033 !important;
+}
+	
+.h44 {
+	font-size: 21px;
+	color: rgb(255, 240, 179);
+	background-color:rgba(61, 0, 77, 0.1);
+	border: 1px solid #290033 !important;
+	}
+
+h5 {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 21px;
+	background-color:rgba(61, 0, 77, 0.1);
+    padding: 3px;
+	border-radius: 30px;
+	border: 1px solid #290033 !important;
+}
+
+.h5 {
+    font-size: 18px;
+	color: white;
+	background-color:rgba(61, 0, 77, 0.1);
+	border: 1px solid #290033 !important;
+	}
+
+h6 {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+.messageInput {
+    margin: 0 10px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        background: #FDFDFD;
+        border: 1px solid #eee !important;
+        border-radius: 2px !important;
+        resize: none;
+        padding: 20px;
+        outline: none !important;
+        text-align: left;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+
+        .warning {
+            flex: 1;
+            color: #F44336;
+            font-weight: 500;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            padding-right: 20px;
+            text-align: right;
+        }
+
+        .sendButton {
+            background: #007bff;
+            padding: 0 12px;
+            height: 40px;
+            line-height: 40px;
+            color: #FFFFFF;
+            font-weight: 500;
+            border-radius: 3px;
+            display: inline-block;
+            transition: all 200ms ease;
+            opacity: 0.4;
+        }
+
+        .sendButton:not(.disabled) {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .sendButton:not(.disabled):hover {
+            background: #0062cc;
+            transform: translateY(-2px);
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .sendButton:not(.disabled):focus {
+            background: #0973e5;
+        }
+    }
+    
+    &::after {
+        content: 'Posting Message';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 200ms ease;
+    }
+
+    &.loading::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
