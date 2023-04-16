@@ -1,0 +1,193 @@
+@import "../../App.scss";
+.dao-home {
+  font-family: "Poppins", sans-serif !important;
+  background-color: #222430;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  .doa-home-proposals {
+    margin: 0 60px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include responsive(phone) {
+      flex-direction: column;
+      gap: 50px;
+      margin: 0;
+    }
+    .dao-line {
+      height: 3px;
+      width: 100px;
+      background-color: green;
+      margin: auto;
+      margin-top: 5px;
+    }
+    .new-proposal-btn {
+      height: 50px;
+      border: none;
+      background-color: #2c2e3d;
+      color: white;
+      // font-size: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      outline: none;
+      padding: 0 10px;
+      &:hover {
+        background-color: #5689f7;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+  .dao-home-container {
+    width: 97vw;
+    margin: 0 auto;
+    background-color: #2c2e3d;
+    padding: 30px;
+    margin-top: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @include responsive(phone) {
+      width: 100vw;
+    }
+    .dao-home-headers {
+      margin-bottom: 50px;
+      font-weight: 900;
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      @include responsive(tablet) {
+        display: none;
+      }
+    }
+    .doa-home-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      @include responsive(phone) {
+        gap: 100px;
+      }
+    }
+    .doa-home-project {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 40px;
+      @include responsive(phone) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      .d-name {
+        font-size: 14px;
+        color: whitesmoke;
+      }
+      .name {
+        @include responsive(phone) {
+          &::before {
+            content: "name :";
+            display: block;
+            margin-bottom: 15px;
+            color: grey;
+          }
+        }
+      }
+      .start {
+        @include responsive(phone) {
+          &::before {
+            content: "Start Date :";
+            display: block;
+            margin-bottom: 15px;
+            color: grey;
+          }
+        }
+      }
+      .finish {
+        @include responsive(phone) {
+          &::before {
+            content: "Finish Date :";
+            display: block;
+            margin-bottom: 15px;
+            color: grey;
+          }
+        }
+      }
+      .upvote {
+        @include responsive(phone) {
+          &::before {
+            content: "UpVote :";
+            display: block;
+            margin-bottom: 15px;
+            color: grey;
+          }
+        }
+      }
+      .dowvote {
+        @include responsive(phone) {
+          &::before {
+            content: "DownVote :";
+            display: block;
+            margin-bottom: 15px;
+            color: grey;
+          }
+        }
+      }
+
+      .upvote {
+        color: green;
+      }
+      .dowvote {
+        color: red;
+      }
+      .active {
+        border: 2px solid blue;
+        // padding: 0 3px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color: rgb(69, 69, 249);
+      }
+      .approve {
+        border: 2px solid green;
+        // padding: 0 3px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color: green;
+      }
+      .d-project-btn {
+        height: 30px;
+        border: none;
+        background-color: #2e6cf6;
+        color: white;
+        font-size: 12px;
+        border-radius: 100vh;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          border: none;
+          color: white;
+          font-size: 12px;
+          cursor: pointer;
+          outline: none;
+          background-color: transparent;
+        }
+        &:hover {
+          background-color: #5689f7;
+        }
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
