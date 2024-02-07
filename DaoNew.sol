@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.22;
+pragma solidity ^0.8.18;
 
 interface IHarmLop {
     function totalSupply() external view returns (uint);
@@ -47,7 +47,7 @@ contract DaoNew {
     constructor (IHarmLop _token, address adres) {
        owner = msg.sender;
        token = _token;
-       statusWorld = false;
+       statusWorld = true;
        owner2 = adres;
     }
 
@@ -58,7 +58,7 @@ contract DaoNew {
         require(TopicCountAktif < 11, "Aktif konu miktari");
 
         require(tokenMiktari >= 100000000000, "must be more than 100k");
-        require(tokenMiktari <= 10000000000000, "must be less than 10m");
+        require(tokenMiktari <= 1000000000000, "must be less than 1m");
 
         require(token.balanceOf(address(msg.sender)) >= tokenMiktari, "must be more than request");
 
@@ -81,7 +81,7 @@ contract DaoNew {
         } else {
 
             require(tokenMiktari >= 10000000000, "must be more than 10k");
-            require(tokenMiktari <= 1000000000000, "must be less than 1m");
+            require(tokenMiktari <= 100000000000, "must be less than 100k");
 
             require(token.balanceOf(address(msg.sender)) >= tokenMiktari, "must be more than request");
 
@@ -103,14 +103,14 @@ contract DaoNew {
 
         if ( commentNox == 0 ) {
 
-            require(block.timestamp > (Topics[toidy_].startTime + 2592000), "1 Ay sure");
+            require(block.timestamp > (Topics[toidy_].startTime + 300), "1 Ay sure"); // 1 ay 2592000
             require(msg.sender == Topics[toidy_].starter, "Address Not Match");
             require(token.transfer(msg.sender, Topics[toidy_].tokeni));
             Topics[toidy_].tokeni = 0;
 
         } else {
 
-            require(block.timestamp > (comments[toidy_][commentNox].startTime + 2592000), "1 Ay sure");
+            require(block.timestamp > (comments[toidy_][commentNox].startTime + 300), "1 Ay sure"); // 1 ay 2592000
             require(msg.sender == comments[toidy_][commentNox].commenter, "Address Not Match");
             require(token.transfer(msg.sender, comments[toidy_][commentNox].tokeni));
             comments[toidy_][commentNox].tokeni = 0;
