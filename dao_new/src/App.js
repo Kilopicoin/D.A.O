@@ -7,9 +7,9 @@ import { ethers } from 'ethers'; // Import ethers.js library
 import dao from './res/daoNew.json'
 
 
-const daoAdres = '0xEc6769F51Bb29c319C469990Ccb94de966DC5d42';
-const TokenAddress = '0xe90725b781cdF8a4fF52940C47De7FF3a0358b08';
-const ChainRPC = 'https://api.s0.b.hmny.io';
+const daoAdres = '0x76f1640B15c372ff6dB116142044C6A5E33A1643';
+const TokenAddress = '0x09e6E20FF399c2134C14232E172ce8ba2b03017E';
+const ChainRPC = 'https://api.harmony.one/';
 
 
 
